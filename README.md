@@ -30,22 +30,45 @@ A modern, ChatGPT-like interface for interacting with PDF documents using AI. Th
 ### Prerequisites
 
 - Python 3.8+
+- uv package manager
 - Modern web browser
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/smart-pdf-chat.git
-   cd smart-pdf-chat
+   git clone https://github.com/Srinath991/Smart-PDF-Chat.git
+   cd Smart-PDF-Chat
    ```
 
 2. Install Python dependencies:
    ```bash
-   pip install -r requirements.txt
+  uv sync
    ```
 
 3. Set up environment variables:
+   Create a `.env` file with the following environment variables:
+
+   ```env
+   # Google Cloud Credentials
+   # 1. Go to Google Cloud Console (https://console.cloud.google.com)
+   # 2. Create a new project or select existing one
+   # 3. Enable Vertex AI API and Cloud Storage API
+   # 4. Create a service account and download JSON key
+   # 5. Copy these values from your JSON key file
+
+   # Pinecone Credentials
+   # 1. Sign up at Pinecone 
+   # 2. Create a new project
+   # 3. Create an index with dimensions=768 and metric=cosine 
+   # 4. Copy these values from your Pinecone console
+
+
+   # Google Gemini API Key
+   # 1. Go to Google AI Studio 
+   # 2. Create an API key
+   ```
+
    ```bash
    cp .env.example .env
    # Edit .env with your configuration
@@ -53,7 +76,7 @@ A modern, ChatGPT-like interface for interacting with PDF documents using AI. Th
 
 4. Start the application:
    ```bash
-   python app/main.py
+   uv run app/main.py
    ```
 
 5. Open your browser and navigate to:
@@ -74,25 +97,10 @@ A modern, ChatGPT-like interface for interacting with PDF documents using AI. Th
 
 3. **Chat Interface**:
    - Messages are displayed in a modern chat interface
-   - User messages appear on the right
-   - AI responses appear on the left
+   - User messages 
+   - AI responses 
    - Scroll through chat history as needed
 
-## Development
-
-### Project Structure
-
-```
-smart-pdf-chat/
-├── app/
-│   ├── static/
-│   │   └── main.js
-│   ├── templates/
-│   │   └── index.html
-│   └── main.py
-├── requirements.txt
-└── README.md
-```
 
 ### Contributing
 
@@ -104,10 +112,4 @@ smart-pdf-chat/
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- ChatGPT for UI inspiration
-- TailwindCSS for the styling framework
-- SweetAlert2 for beautiful notifications
+This project is licensed under the MIT License
