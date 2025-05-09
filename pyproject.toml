@@ -1,0 +1,23 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.12",
+    "jinja2>=3.1.6",
+    "langchain>=0.3.25",
+    "langchain-community>=0.3.23",
+    "langchain-google-community[gcs]>=2.0.7",
+    "langchain-google-genai>=2.1.4",
+    "langchain-pinecone>=0.2.6",
+    "pymupdf>=1.25.5",
+    "python-multipart>=0.0.20",
+    "uvicorn>=0.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "onnxruntime==1.16.3",
+]
