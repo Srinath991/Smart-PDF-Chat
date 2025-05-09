@@ -21,7 +21,8 @@ A modern, ChatGPT-like interface for interacting with PDF documents using AI. Th
 
 - **Backend**:
   - Python (FastAPI)
-  - Vector Database for PDF Storage
+  - Pinecone Vector Database 
+  - google generative AI and google cloud storage(GCS)
   - AI/LLM Integration
 
 ## Getting Started
